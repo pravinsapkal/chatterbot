@@ -6,8 +6,8 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 
 app = Flask(__name__)
 
-english_bot = ChatBot("Chatterbot", storage_adapter="chatterbot.storage.SQLStorageAdapter")
-#english_bot = ChatBot('Examplebot', storage_adapter='chatterbot.storage.SQLStorageAdapter', database_uri=urlparse(os.environ.get('DATABASE_URL')))
+#english_bot = ChatBot("Chatterbot", storage_adapter="chatterbot.storage.SQLStorageAdapter")
+english_bot = ChatBot('Examplebot')
 trainer = ChatterBotCorpusTrainer(english_bot)
 #trainer.train("chatterbot.corpus.english")
 trainer.train("./custom.json")
